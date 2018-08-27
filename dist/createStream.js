@@ -127,9 +127,9 @@ exports.default = function () {
 
   const config = (0, _makeStreamConfig2.default)(userConfig);
 
-  const columnWidthIndex = _lodash2.default.mapValues(config.columns, column => {
+  const columnWidthIndex =  Object.values(_lodash2.default.mapValues(config.columns, column => {
     return column.width + column.paddingLeft + column.paddingRight;
-  });
+  }));
 
   let empty;
 
